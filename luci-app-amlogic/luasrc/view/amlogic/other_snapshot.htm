@@ -1,31 +1,38 @@
+<%--
+  SPDX-License-Identifier: GPL-2.0
+  Snapshot list template.
+
+  Purpose: render existing btrfs snapshots as a grid of cards with delete and
+  restore buttons; fetches snapshot list via XHR on load.
+--%>
 <style>
 .NewsTdHeight{ line-height:20px; }
 .SnapshotsTitHeight{ line-height:40px; text-align: center; }
 .list{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    text-align: center;
-    position: relative;
-    width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	text-align: center;
+	position: relative;
+	width: 100%;
 }
 .item{
-    border: 1px solid rgba(128,128,128,0.3);
-    font-size: 14px;
-    width: 150px;
-    height: 130px;
-    margin:8px;
-    text-align: center;
-    align-items:center;
+	border: 1px solid rgba(128,128,128,0.3);
+	font-size: 14px;
+	width: 150px;
+	height: 130px;
+	margin:8px;
+	text-align: center;
+	align-items:center;
 }
 .item:hover{opacity:0.85;}
 .item:not(:nth-child(3n)){
-    content: "";
-    width: 150px;
+	content: "";
+	width: 150px;
 }
 .list:after {
-    content: "";
-    width: 150px;
+	content: "";
+	width: 150px;
 }
 </style>
 
@@ -35,7 +42,7 @@
 
 <script type="text/javascript">//<![CDATA[
 
-    // Delete snapshot function
+	// Delete snapshot function
 	function delete_snapshot(btn,snapshot_delete_sel)
 	{
 
@@ -147,4 +154,3 @@
 	});
 
 //]]></script>
-

@@ -1,3 +1,10 @@
+<%--
+  SPDX-License-Identifier: GPL-2.0
+  Server log viewer template.
+
+  Purpose: display /tmp/amlogic/amlogic.log in a read-only textarea with
+  auto-refresh; provides Stop/Clear/Download buttons via XHR.
+--%>
 <%+cbi/valueheader%>
 <textarea id="amlogic.ophub.clog" class="cbi-input-textarea" style="width: 100%;display:inline" data-update="change" rows="8" cols="60" readonly="readonly" > </textarea>
 <fieldset class="cbi-section">

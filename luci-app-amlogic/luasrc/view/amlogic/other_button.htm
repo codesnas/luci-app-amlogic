@@ -1,3 +1,10 @@
+<%--
+  SPDX-License-Identifier: GPL-2.0
+  CBI submit button widget template.
+
+  Purpose: render a styled submit button with dynamic display and inputstyle;
+  wraps the standard cbi/valueheader + cbi/valuefooter partials.
+--%>
 <%+cbi/valueheader%>
 	<% if self:cfgvalue(section) ~= false then %>
 		<input class="cbi-button cbi-button-<%=self.inputstyle or "button" %>" style="display: <%= display %>" type="submit" <%= attr("name", cbid) .. attr("id", cbid) .. attr("value", self.inputtitle or self.title)%> />
