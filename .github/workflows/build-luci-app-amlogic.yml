@@ -76,15 +76,15 @@ jobs:
           echo "LUCI_VERSION=${VERSION}" >> $GITHUB_ENV
 
       - name: Create Release and upload packages
-        uses: ncipollo/release-action@main
+        uses: ophub/upload-to-release@main
         with:
           tag: ${{ env.LUCI_VERSION }}
           artifacts: artifacts/*
-          allowUpdates: true
-          removeArtifacts: false
-          replacesArtifacts: true
-          makeLatest: true
-          token: ${{ secrets.GITHUB_TOKEN }}
+          allow_updates: true
+          remove_artifacts: false
+          replaces_artifacts: true
+          make_latest: true
+          gh_token: ${{ secrets.GITHUB_TOKEN }}
           body: |
             - Supports management of Amlogic s9xxx, Allwinner, and Rockchip boxes.
               The current functions include install OpenWrt to EMMC,
