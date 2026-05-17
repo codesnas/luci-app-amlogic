@@ -76,7 +76,7 @@ jobs:
           echo "LUCI_VERSION=${VERSION}" >> $GITHUB_ENV
 
       - name: Create Release and upload packages
-        uses: ophub/upload-to-release@main
+        uses: ophub/upload-to-releases@main
         with:
           tag: ${{ env.LUCI_VERSION }}
           artifacts: artifacts/*
